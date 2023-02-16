@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import Mainjs from './Main.vue'
 
 import './assets/main.css'
 
@@ -18,5 +19,8 @@ app.config.errorHandler = (err)=>{
 
 app.component('TestButton', app)
 
-// 将一个app 挂载在html 中
-app.mount("#app")
+// 将一个app 挂载在html 中app
+// app.mount("#app")
+
+// 自定义的测试类
+const mainJs = createApp(Mainjs).mount("#app")
