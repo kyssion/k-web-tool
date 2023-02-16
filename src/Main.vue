@@ -2,21 +2,20 @@
 export default {
   data() {
     return {
-      count: 1
+      someObject: {}
     }
   },
-
-  // `mounted` is a lifecycle hook which we will explain later
   mounted() {
-    // `this` refers to the component instance.
-    console.log(this.count) // => 1
+    const newObject = {
+      value: 123
+    }
+    this.someObject = newObject
 
-    // data can be mutated as well
-    this.count = 2
+    console.log(newObject === this.someObject) // false
   }
 }
 </script>
 
 <template>
-  Count is: {{ count }}
+  Count is: {{ someObject }}
 </template>
